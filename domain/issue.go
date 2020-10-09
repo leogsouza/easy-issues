@@ -2,12 +2,13 @@ package domain
 
 // Issue represents a Project task
 type Issue struct {
-	ID        int64
-	Title     string
-	ProjectID int64
-	OwnerID   int64
-	Status    Status
-	Priority  Priority
+	ID          int64    `db:"id"`
+	Title       string   `db:"title"`
+	Description string   `db:"description"`
+	ProjectID   int64    `db:"project_id"`
+	OwnerID     int64    `db:"owner_id"`
+	Status      Status   `db:"status"`
+	Priority    Priority `db:"priority"`
 }
 
 // IssueService contains methods do Handle issue model
